@@ -1,0 +1,50 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-size: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+input {
+  appearance: none;
+  cursor: pointer;
+}
+
+input::before {
+  border: 2px solid yellowgreen;
+  border-radius: 50%;
+  content: "\f00d";
+  font-weight: 900;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: coral;
+  margin-right: 10px;
+  font-family: "Font Awesome 5 Free";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input:hover::before {
+  background-color: rgb(237, 98, 47);
+}
+
+input:checked::before {
+  content: "\f00c";
+  background-color: #fff;
+  border: 2px solid red;
+}
